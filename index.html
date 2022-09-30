@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>개인정보페이지</title>
+    
+
+    <style>
+        .form_box {
+            font-weight: bold;
+            
+        }
+        .form_box > p {
+           margin-top: 1%;
+        }
+        .box {
+            color: #322054;
+            border: 1px solid #baa7dd;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 30px;
+            width: 338px;
+            height: 430px;
+            padding: 20px;
+            box-shadow: 2px 2px 2px #322054;
+            text-align: center;
+
+            
+        }
+        .box > p > input {
+            border-color: #baa7dd
+        }
+        #browser {
+            color: #322054;
+        }
+        #send1 {
+            color: #ffffff;
+            border-color: #75609b;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #322054;
+            width: 50px;
+            height: 25px;
+        }
+        #btn {
+            margin: auto;
+            margin-top: 25px;
+            width: 30px;
+        }
+    </style>
+    <script>
+        function submit() {
+            alert("보내기 완료!");
+            window.location.reload
+        
+        }
+    </script>
+
+  </head>
+  <body style="background-color: #f2eaff;">
+    <form class="form_box" action method="POST" onsubmit="submit()">
+        <div class="box">
+            <p>First name : <br /><input  type="text" required /></p>
+            <p>Last name : <br /><input  type="text" required /></p>
+            <p>Email : <br /><input  type="text" required /></p>
+            <p>
+                Gender : 
+                <input type="radio" name="gender" value="male_info" required />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="male_info" required />
+                <label for="female">Female</label>
+            </p>
+            <p>
+                Favorite : 
+                <input type="checkbox" name="lang" value="html_box" />
+                HTML
+                <input type="checkbox" name="lang" value="java_box" />
+                JAVA
+                <input type="checkbox" name="lang" value="js_box" />
+                JavaScript
+            </p>
+
+            <p>
+                Browser : 
+                    <select id="browser" name="browser" >
+                        <option value="사파리" selected>Safari</option>
+                        <option value="엣지" selected>Edge</option>
+                        <option value="파이어폭스" selected>Firefox</option>
+                        <option value="크롬" selected>Chrome</option>
+                    </select>
+            </p>
+            <p>
+                Birthday : 
+                <input type="date" name="birthday" required />
+            </p>
+            <div id="btn">
+                <input id="send1" type="submit" value="Send" onclick="alert('보내기 완료!')" />
+            </div>
+            
+            </form>
+        </div>
+      
+  </body>
+</html>
